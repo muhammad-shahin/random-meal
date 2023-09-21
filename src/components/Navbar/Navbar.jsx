@@ -12,7 +12,7 @@ const Navbar = () => {
         </NavLink>
         <NavLink
           className="text-[18px] font-medium mr-5 hover:text-rose-500"
-          to="/meal-categories"
+          to="/meal-categories/Chicken"
         >
           Meal Categories
         </NavLink>

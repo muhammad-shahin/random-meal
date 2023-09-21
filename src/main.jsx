@@ -14,15 +14,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/all-categories",
-        loader: () => fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
+        loader: () =>
+          fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
         element: <AllCategories></AllCategories>,
       },
       {
-        path: "/meal-categories",
+        path: "/meal-categories/:categoryName",
+        loader: ({ params }) =>
+          fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.categoryName}`
+          ),
         element: <MealCategories></MealCategories>,
       },
       {
         path: "/random-meal",
+        loader: () =>
+          fetch("https://www.themealdb.com/api/json/v1/1/random.php"),
         element: <RandomMeal></RandomMeal>,
       },
     ],
