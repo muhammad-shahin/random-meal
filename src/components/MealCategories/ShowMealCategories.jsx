@@ -6,12 +6,9 @@ const ShowMealCategories = ({ meal }) => {
       <div>
         <img className="mx-auto rounded-lg object-cover" src={strMealThumb} />
       </div>
-      <div className="h-[180px] flex flex-col justify-end">
+      <div className="min-h-[180px] flex flex-col justify-end">
       <h2 className="text-[32px] font-medium text-rose-700 ">{strMeal}</h2>
       <button
-        // onClick={() => {
-        //   handleExploreCategory(strCategory);
-        // }}
         className="font-medium text-[18px] bg-rose-300 text-pink-800 px-5 py-2 rounded-full mt-5 hover:bg-white duration-500"
       >
         How to Cook This Meal?

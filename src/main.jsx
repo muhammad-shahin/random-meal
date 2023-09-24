@@ -4,16 +4,16 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MealCategories from "./components/MealCategories/MealCategories.jsx";
 import RandomMeal from "./components/RandomMeal/RandomMeal.jsx";
-import Navbar from "./components/Navbar/Navbar";
 import AllCategories from "./components/AllCategories/AllCategories";
+import Root from "./components/Root/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar></Navbar>,
+    element: <Root></Root>,
     children: [
       {
-        path: "/all-categories",
+        path: "/",
         loader: () =>
           fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
         element: <AllCategories></AllCategories>,
